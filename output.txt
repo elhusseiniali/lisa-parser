@@ -1,7 +1,0 @@
-("Original: {'must': {'Pa&iacute;s', 'cool-col', 'Mes', 'geometry', 'col2'}, "
- "'may': {'Pa&iacute;s', 'cool-col', 'Mes', 'geometry', 'col2'}}, Current: "
- "{'must': {'Pa&iacute;s', 'geometry', 'cool-col', 'Mes', 'Latitude', "
- "'Longitude', 'col2'}, 'may': {'Pa&iacute;s', 'geometry', 'cool-col', 'Mes', "
- "'Latitude', 'Longitude', 'col2'}}, Added: {'must': set(), 'may': {'Mes', "
- "'Latitude', 'Longitude', 'geometry'}}, Removed: {'must': set(), 'may': "
- 'set()}, T: {}')
