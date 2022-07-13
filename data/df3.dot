@@ -1,0 +1,35 @@
+digraph {
+	"node0" ["shape"="rect","color"="gray","label"="LAMBDA(['geometry'], lambda [l] : l::y)"];
+	"node1" ["shape"="rect","color"="gray","label"="LAMBDA(['geometry'], lambda [l] : l::x)"];
+	"node2" ["shape"="rect","color"="gray","label"="assign({[&quot;col2&quot;] &lt; 5, ['cool-col']}, 100)"];
+	"node3" ["label"="concat_rows","shape"="rect","color"="black","peripheries"="2"];
+	"node4" ["shape"="rect","color"="gray","label"="access:[[0, 0]:[10, 10]:]"];
+	"node5" ["shape"="rect","color"="gray","label"="assign_to:['Latitude']"];
+	"node6" ["shape"="rect","color"="gray","label"="assign_to:['Mes']"];
+	"node7" ["shape"="rect","color"="black","label"="read('temporal.csv')"];
+	"node8" ["shape"="rect","color"="gray","label"="filter_null(ROWS)"];
+	"node9" ["shape"="rect","color"="gray","label"="project:['geometry']"];
+	"node10" ["shape"="rect","color"="gray","label"="assign_to:['geometry']"];
+	"node11" ["shape"="rect","color"="gray","label"="assign_to:['Longitude']"];
+	"node12" ["shape"="rect","color"="black","label"="read('mapa.csv')"];
+	"node13" ["shape"="rect","color"="gray","label"="TO_GEOCODE(['Pa&iacute;s'])"];
+	"node14" ["shape"="rect","color"="gray","label"="TO_DATETIME(['Mes'])"];
+	"node0" -> "node5" ["color"="blue","label"="A"];
+	"node1" -> "node11" ["color"="blue","label"="A"];
+	"node2" -> "node3" ["color"="red","label"=1];
+	"node4" -> "node14" ["color"="black"];
+	"node4" -> "node6" ["color"="black"];
+	"node5" -> "node11" ["color"="black"];
+	"node5" -> "node1" ["color"="black"];
+	"node6" -> "node3" ["color"="red","label"=0];
+	"node7" -> "node4" ["color"="black"];
+	"node8" -> "node10" ["color"="black"];
+	"node8" -> "node13" ["color"="black"];
+	"node9" -> "node10" ["color"="blue","label"="A"];
+	"node10" -> "node0" ["color"="black"];
+	"node10" -> "node5" ["color"="black"];
+	"node11" -> "node2" ["color"="black"];
+	"node12" -> "node8" ["color"="black"];
+	"node13" -> "node9" ["color"="black"];
+	"node14" -> "node6" ["color"="blue","label"="A"];
+}
