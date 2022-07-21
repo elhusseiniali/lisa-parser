@@ -13,6 +13,10 @@ class ColumnDomain():
 
         self.copies = {}
 
+    def was_added(self, input_string):
+        return input_string in self.added['must'] or \
+            input_string in self.added['may']
+
     def __str__(self):
         return f"Original: {self.original}, Current: {self.current}, "\
                f"Added: {self.added}, Removed: {self.removed}, "\
