@@ -34,7 +34,7 @@ class Read(Operation):
                          row=None)
 
 
-class ToDatetime(Operation):
+class Conversion(Operation):
     def __init__(self, column_name):
         super().__init__(column_name=column_name,
                          file_name=None,
@@ -53,3 +53,4 @@ class Assignment(Operation):
         super().__init__(column_name=column_name,
                          file_name=None,
                          row=None)
+        self.value = value
